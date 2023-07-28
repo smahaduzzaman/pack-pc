@@ -5,8 +5,6 @@ const Navbar = () => {
   return (
     <div>
       <h1>Navbar</h1>
-      <Link href="/featuredProduct">Featured Product</Link>
-      <Link href="/featuredCategory">Featured Category</Link>
     </div>
     // <nav className="flex items-center justify-between bg-gray-800 p-4">
     //   {/* Logo or Brand */}

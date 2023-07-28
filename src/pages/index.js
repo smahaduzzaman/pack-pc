@@ -1,14 +1,21 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import FeaturedProduct from "@/pages/FeaturedProduct";
 import FeaturedCategory from "@/pages/FeaturedCategory";
+// import FeaturedProduct from "@/components/UI/FeaturedProduct";
+// import FeaturedCategory from "@/components/UI/FeaturedCategory";
 import Product from "@/components/UI/Product";
 
-export default function Home({ products }) {
+export default function Home({ data }) {
+  const { featuredProducts, featuredCategories, products } = data;
+  // const featuredProducts = data.featuredProducts;
+  // const featuredCategories = data.featuredCategories;
+  // const products = data.products;
+
   return (
-    <div>
-      <FeaturedProduct />
+    <div className="container">
+      {/* <FeaturedProduct featuredProducts={featuredProducts} /> */}
       <Product products={products} />
-      <FeaturedCategory />
+      {/* <FeaturedCategory featuredCategories={featuredCategories} /> */}
     </div>
   );
 }
@@ -18,15 +25,14 @@ Home.getLayout = function getLayout(page) {
 };
 
 const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("http://localhost:5000/data");
   const data = await res.json();
   console.log(data);
 
   return {
     props: {
-      products: data,
+      data: data,
     },
-    // revalidate: 10,
   };
 };
 

@@ -1,17 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-async function getData() {
-  const res = await fetch("http://localhost:5000/featuredProducts");
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
 
-  return res.json();
-}
-
-const FeaturedProduct = async () => {
-  const featuredProducts = await getData();
+const FeaturedProduct = async ({ featuredProducts }) => {
   return (
     <section className="container mx-auto my-8 px-4">
       <h2 className="text-2xl font-bold mb-4">Featured Products</h2>

@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
 
-const FeaturedProduct = ({ featuredProducts }) => {
-  console.log(featuredProducts);
+const FeaturedProduct = async ({ featuredProducts }) => {
   return (
     <section className="container mx-auto my-8 px-4">
       <h2 className="text-2xl font-bold mb-4">Featured Products</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {featuredProducts?.map((product) => (
+        {featuredProducts?.slice(0, 4).map((product) => (
           <div key={product.id} className="bg-white p-4 rounded shadow">
             <Image
               src={product?.image}
@@ -45,15 +44,3 @@ const FeaturedProduct = ({ featuredProducts }) => {
 };
 
 export default FeaturedProduct;
-
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/featuredProducts");
-  const data = await res.json();
-
-  return {
-    props: {
-      featuredProducts: data,
-    },
-    // revalidate: 10,
-  };
-};

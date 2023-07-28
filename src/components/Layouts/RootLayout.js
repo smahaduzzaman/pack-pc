@@ -4,7 +4,7 @@ import Navbar from "../UI/Navbar";
 
 export default function RootLayout({ children }) {
   return (
-    <div>
+    <div className="container">
       <Head>
         <title>PC Builder | Home</title>
         <link rel="icon" href="/favicon.ico" />

@@ -30,16 +30,3 @@ const FeaturedCategory = ({ featuredCategories }) => {
 };
 
 export default FeaturedCategory;
-
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/featuredCategories");
-  const data = await res.json();
-  console.log(data);
-
-  return {
-    props: {
-      featuredCategories: data.data,
-    },
-    // revalidate: 10,
-  };
-};

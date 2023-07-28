@@ -1,344 +1,346 @@
 {
-  "featuredProducts": [
-    {
-      "id": 1,
-      "image": "/images/product1.jpg",
-      "productName": "Product 1",
-      "category": "CPU / Processor",
-      "price": 199.99,
-      "status": "In Stock",
-      "rating": 4.5
-    },
-    {
-      "id": 2,
-      "image": "/images/product2.jpg",
-      "productName": "Product 2",
-      "category": "Motherboard",
-      "price": 149.99,
-      "status": "In Stock",
-      "rating": 4.0
-    },
-    {
-      "id": 3,
-      "image": "/images/product3.jpg",
-      "productName": "Product 3",
-      "category": "RAM",
-      "price": 89.99,
-      "status": "Out of stock",
-      "rating": 3.5
-    },
-    {
-      "id": 4,
-      "image": "/images/product4.jpg",
-      "productName": "Product 4",
-      "category": "Power Supply Unit",
-      "price": 79.99,
-      "status": "In Stock",
-      "rating": 4.8
-    },
-    {
-      "id": 5,
-      "image": "/images/product5.jpg",
-      "productName": "Product 5",
-      "category": "Storage Device",
-      "price": 129.99,
-      "status": "In Stock",
-      "rating": 4.2
-    },
-    {
-      "id": 6,
-      "image": "/images/product6.jpg",
-      "productName": "Product 6",
-      "category": "Monitor",
-      "price": 249.99,
-      "status": "In Stock",
-      "rating": 4.7
-    }
-  ],
-  "featuredCategories": [
-    {
-      "id": "cpu-processor",
-      "name": "CPU / Processor",
-      "image": "/images/cpu.jpg"
-    },
-    {
-      "id": "motherboard",
-      "name": "Motherboard",
-      "image": "/images/motherboard.jpg"
-    },
-    {
-      "id": "ram",
-      "name": "RAM",
-      "image": "/images/ram.jpg"
-    },
-    {
-      "id": "power-supply-unit",
-      "name": "Power Supply Unit",
-      "image": "/images/psu.jpg"
-    },
-    {
-      "id": "storage-device",
-      "name": "Storage Device",
-      "image": "/images/storage.jpg"
-    },
-    {
-      "id": "monitor",
-      "name": "Monitor",
-      "image": "/images/monitor.jpg"
-    },
-    {
-      "id": "others",
-      "name": "Others",
-      "image": "/images/others.jpg"
-    }
-  ],
-  "products": [
-    {
-      "id": 101,
-      "image": "/images/products/product101.jpeg",
-      "productName": "Product 101",
-      "category": "CPU / Processor",
-      "price": 299.99,
-      "status": "In Stock",
-      "rating": 4.9,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand X",
-        "Model": "Model ABC",
-        "Specification": "Spec XYZ",
-        "Port": "USB 3.0",
-        "Type": "Type-C",
-        "Voltage": "110-240V"
+  "data": {
+    "featuredProducts": [
+      {
+        "id": 1,
+        "image": "/images/product1.jpg",
+        "productName": "Product 1",
+        "category": "CPU / Processor",
+        "price": 199.99,
+        "status": "In Stock",
+        "rating": 4.5
       },
-      "individualRating": 4.9,
-      "averageRating": 4.9
-    },
-    {
-      "id": 102,
-      "image": "/images/products/product102.jpeg",
-      "productName": "Product 102",
-      "category": "CPU / Processor",
-      "price": 249.99,
-      "status": "In Stock",
-      "rating": 4.6,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand Y",
-        "Model": "Model DEF",
-        "Specification": "Spec UVW",
-        "Port": "USB 2.0",
-        "Type": "Type-A",
-        "Voltage": "100-240V"
+      {
+        "id": 2,
+        "image": "/images/product2.jpg",
+        "productName": "Product 2",
+        "category": "Motherboard",
+        "price": 149.99,
+        "status": "In Stock",
+        "rating": 4.0
       },
-      "individualRating": 4.6,
-      "averageRating": 4.6
-    },
-    {
-      "id": 201,
-      "image": "/images/products/product201.jpeg",
-      "productName": "Product 201",
-      "category": "Motherboard",
-      "price": 179.99,
-      "status": "In Stock",
-      "rating": 4.2,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand P",
-        "Model": "Model IJK",
-        "Specification": "Spec LMN",
-        "Port": "USB 3.1",
-        "Type": "Type-B",
-        "Voltage": "100-220V"
+      {
+        "id": 3,
+        "image": "/images/product3.jpg",
+        "productName": "Product 3",
+        "category": "RAM",
+        "price": 89.99,
+        "status": "Out of stock",
+        "rating": 3.5
       },
-      "individualRating": 4.2,
-      "averageRating": 4.2
-    },
-    {
-      "id": 202,
-      "image": "/images/products/product202.jpeg",
-      "productName": "Product 202",
-      "category": "Motherboard",
-      "price": 199.99,
-      "status": "In Stock",
-      "rating": 4.8,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand Q",
-        "Model": "Model XYZ",
-        "Specification": "Spec PQR",
-        "Port": "USB 2.0",
-        "Type": "Type-C",
-        "Voltage": "110-240V"
+      {
+        "id": 4,
+        "image": "/images/product4.jpg",
+        "productName": "Product 4",
+        "category": "Power Supply Unit",
+        "price": 79.99,
+        "status": "In Stock",
+        "rating": 4.8
       },
-      "individualRating": 4.8,
-      "averageRating": 4.8
-    },
-    {
-      "id": 301,
-      "image": "/images/product301.jpg",
-      "productName": "Product 301",
-      "category": "RAM",
-      "price": 99.99,
-      "status": "In Stock",
-      "rating": 4.4,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand M",
-        "Model": "Model OPQ",
-        "Specification": "Spec RST",
-        "Port": "DDR4",
-        "Type": "DIMM",
-        "Voltage": "1.2V"
+      {
+        "id": 5,
+        "image": "/images/product5.jpg",
+        "productName": "Product 5",
+        "category": "Storage Device",
+        "price": 129.99,
+        "status": "In Stock",
+        "rating": 4.2
       },
-      "individualRating": 4.4,
-      "averageRating": 4.4
-    },
-    {
-      "id": 302,
-      "image": "/images/product302.jpg",
-      "productName": "Product 302",
-      "category": "RAM",
-      "price": 119
-    },
-    {
-      "id": 302,
-      "image": "/images/product302.jpg",
-      "productName": "Product 302",
-      "category": "RAM",
-      "price": 119.99,
-      "status": "In Stock",
-      "rating": 4.9,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand N",
-        "Model": "Model STU",
-        "Specification": "Spec VWX",
-        "Port": "DDR4",
-        "Type": "DIMM",
-        "Voltage": "1.35V"
+      {
+        "id": 6,
+        "image": "/images/product6.jpg",
+        "productName": "Product 6",
+        "category": "Monitor",
+        "price": 249.99,
+        "status": "In Stock",
+        "rating": 4.7
+      }
+    ],
+    "featuredCategories": [
+      {
+        "id": "cpu-processor",
+        "name": "CPU / Processor",
+        "image": "/images/cpu.jpg"
       },
-      "individualRating": 4.9,
-      "averageRating": 4.9
-    },
-    {
-      "id": 401,
-      "image": "/images/product401.jpg",
-      "productName": "Product 401",
-      "category": "Power Supply Unit",
-      "price": 89.99,
-      "status": "In Stock",
-      "rating": 4.6,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand R",
-        "Model": "Model YZ",
-        "Specification": "Spec ABC",
-        "Port": "AC Power Input",
-        "Type": "ATX",
-        "Voltage": "110-240V"
+      {
+        "id": "motherboard",
+        "name": "Motherboard",
+        "image": "/images/motherboard.jpg"
       },
-      "individualRating": 4.6,
-      "averageRating": 4.6
-    },
-    {
-      "id": 402,
-      "image": "/images/product402.jpg",
-      "productName": "Product 402",
-      "category": "Power Supply Unit",
-      "price": 109.99,
-      "status": "Out of stock",
-      "rating": 4.3,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand S",
-        "Model": "Model LMN",
-        "Specification": "Spec XYZ",
-        "Port": "AC Power Input",
-        "Type": "ATX",
-        "Voltage": "100-240V"
+      {
+        "id": "ram",
+        "name": "RAM",
+        "image": "/images/ram.jpg"
       },
-      "individualRating": 4.3,
-      "averageRating": 4.3
-    },
-    {
-      "id": 501,
-      "image": "/images/product501.jpg",
-      "productName": "Product 501",
-      "category": "Storage Device",
-      "price": 149.99,
-      "status": "In Stock",
-      "rating": 4.7,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand W",
-        "Model": "Model XYZ",
-        "Specification": "Spec DEF",
-        "Port": "SATA",
-        "Type": "SSD",
-        "Voltage": "5V"
+      {
+        "id": "power-supply-unit",
+        "name": "Power Supply Unit",
+        "image": "/images/psu.jpg"
       },
-      "individualRating": 4.7,
-      "averageRating": 4.7
-    },
-    {
-      "id": 502,
-      "image": "/images/product502.jpg",
-      "productName": "Product 502",
-      "category": "Storage Device",
-      "price": 199.99,
-      "status": "In Stock",
-      "rating": 4.5,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand U",
-        "Model": "Model GHI",
-        "Specification": "Spec JKL",
-        "Port": "SATA",
-        "Type": "HDD",
-        "Voltage": "5V"
+      {
+        "id": "storage-device",
+        "name": "Storage Device",
+        "image": "/images/storage.jpg"
       },
-      "individualRating": 4.5,
-      "averageRating": 4.5
-    },
-    {
-      "id": 601,
-      "image": "/images/product601.jpg",
-      "productName": "Product 601",
-      "category": "Monitor",
-      "price": 279.99,
-      "status": "In Stock",
-      "rating": 4.8,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand V",
-        "Model": "Model OPQ",
-        "Specification": "Spec MNO",
-        "Port": "HDMI, DisplayPort",
-        "Type": "LED",
-        "Voltage": "100-240V"
+      {
+        "id": "monitor",
+        "name": "Monitor",
+        "image": "/images/monitor.jpg"
       },
-      "individualRating": 4.8,
-      "averageRating": 4.8
-    },
-    {
-      "id": 602,
-      "image": "/images/product602.jpg",
-      "productName": "Product 602",
-      "category": "Monitor",
-      "price": 329.99,
-      "status": "In Stock",
-      "rating": 4.4,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "keyFeatures": {
-        "Brand": "Brand X",
-        "Model": "Model PQR",
-        "Specification": "Spec STU",
-        "Port": "HDMI, DisplayPort",
-        "Type": "LED",
-        "Voltage": "110-240V"
+      {
+        "id": "others",
+        "name": "Others",
+        "image": "/images/others.jpg"
+      }
+    ],
+    "products": [
+      {
+        "id": 101,
+        "image": "/images/products/product101.jpeg",
+        "productName": "Product 101",
+        "category": "CPU / Processor",
+        "price": 299.99,
+        "status": "In Stock",
+        "rating": 4.9,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand X",
+          "Model": "Model ABC",
+          "Specification": "Spec XYZ",
+          "Port": "USB 3.0",
+          "Type": "Type-C",
+          "Voltage": "110-240V"
+        },
+        "individualRating": 4.9,
+        "averageRating": 4.9
       },
-      "individualRating": 4.4,
-      "averageRating": 4.4
-    }
-  ]
+      {
+        "id": 102,
+        "image": "/images/products/product102.jpeg",
+        "productName": "Product 102",
+        "category": "CPU / Processor",
+        "price": 249.99,
+        "status": "In Stock",
+        "rating": 4.6,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand Y",
+          "Model": "Model DEF",
+          "Specification": "Spec UVW",
+          "Port": "USB 2.0",
+          "Type": "Type-A",
+          "Voltage": "100-240V"
+        },
+        "individualRating": 4.6,
+        "averageRating": 4.6
+      },
+      {
+        "id": 201,
+        "image": "/images/products/product201.jpeg",
+        "productName": "Product 201",
+        "category": "Motherboard",
+        "price": 179.99,
+        "status": "In Stock",
+        "rating": 4.2,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand P",
+          "Model": "Model IJK",
+          "Specification": "Spec LMN",
+          "Port": "USB 3.1",
+          "Type": "Type-B",
+          "Voltage": "100-220V"
+        },
+        "individualRating": 4.2,
+        "averageRating": 4.2
+      },
+      {
+        "id": 202,
+        "image": "/images/products/product202.jpeg",
+        "productName": "Product 202",
+        "category": "Motherboard",
+        "price": 199.99,
+        "status": "In Stock",
+        "rating": 4.8,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand Q",
+          "Model": "Model XYZ",
+          "Specification": "Spec PQR",
+          "Port": "USB 2.0",
+          "Type": "Type-C",
+          "Voltage": "110-240V"
+        },
+        "individualRating": 4.8,
+        "averageRating": 4.8
+      },
+      {
+        "id": 301,
+        "image": "/images/product301.jpg",
+        "productName": "Product 301",
+        "category": "RAM",
+        "price": 99.99,
+        "status": "In Stock",
+        "rating": 4.4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand M",
+          "Model": "Model OPQ",
+          "Specification": "Spec RST",
+          "Port": "DDR4",
+          "Type": "DIMM",
+          "Voltage": "1.2V"
+        },
+        "individualRating": 4.4,
+        "averageRating": 4.4
+      },
+      {
+        "id": 302,
+        "image": "/images/product302.jpg",
+        "productName": "Product 302",
+        "category": "RAM",
+        "price": 119
+      },
+      {
+        "id": 302,
+        "image": "/images/product302.jpg",
+        "productName": "Product 302",
+        "category": "RAM",
+        "price": 119.99,
+        "status": "In Stock",
+        "rating": 4.9,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand N",
+          "Model": "Model STU",
+          "Specification": "Spec VWX",
+          "Port": "DDR4",
+          "Type": "DIMM",
+          "Voltage": "1.35V"
+        },
+        "individualRating": 4.9,
+        "averageRating": 4.9
+      },
+      {
+        "id": 401,
+        "image": "/images/product401.jpg",
+        "productName": "Product 401",
+        "category": "Power Supply Unit",
+        "price": 89.99,
+        "status": "In Stock",
+        "rating": 4.6,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand R",
+          "Model": "Model YZ",
+          "Specification": "Spec ABC",
+          "Port": "AC Power Input",
+          "Type": "ATX",
+          "Voltage": "110-240V"
+        },
+        "individualRating": 4.6,
+        "averageRating": 4.6
+      },
+      {
+        "id": 402,
+        "image": "/images/product402.jpg",
+        "productName": "Product 402",
+        "category": "Power Supply Unit",
+        "price": 109.99,
+        "status": "Out of stock",
+        "rating": 4.3,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand S",
+          "Model": "Model LMN",
+          "Specification": "Spec XYZ",
+          "Port": "AC Power Input",
+          "Type": "ATX",
+          "Voltage": "100-240V"
+        },
+        "individualRating": 4.3,
+        "averageRating": 4.3
+      },
+      {
+        "id": 501,
+        "image": "/images/product501.jpg",
+        "productName": "Product 501",
+        "category": "Storage Device",
+        "price": 149.99,
+        "status": "In Stock",
+        "rating": 4.7,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand W",
+          "Model": "Model XYZ",
+          "Specification": "Spec DEF",
+          "Port": "SATA",
+          "Type": "SSD",
+          "Voltage": "5V"
+        },
+        "individualRating": 4.7,
+        "averageRating": 4.7
+      },
+      {
+        "id": 502,
+        "image": "/images/product502.jpg",
+        "productName": "Product 502",
+        "category": "Storage Device",
+        "price": 199.99,
+        "status": "In Stock",
+        "rating": 4.5,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand U",
+          "Model": "Model GHI",
+          "Specification": "Spec JKL",
+          "Port": "SATA",
+          "Type": "HDD",
+          "Voltage": "5V"
+        },
+        "individualRating": 4.5,
+        "averageRating": 4.5
+      },
+      {
+        "id": 601,
+        "image": "/images/product601.jpg",
+        "productName": "Product 601",
+        "category": "Monitor",
+        "price": 279.99,
+        "status": "In Stock",
+        "rating": 4.8,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand V",
+          "Model": "Model OPQ",
+          "Specification": "Spec MNO",
+          "Port": "HDMI, DisplayPort",
+          "Type": "LED",
+          "Voltage": "100-240V"
+        },
+        "individualRating": 4.8,
+        "averageRating": 4.8
+      },
+      {
+        "id": 602,
+        "image": "/images/product602.jpg",
+        "productName": "Product 602",
+        "category": "Monitor",
+        "price": 329.99,
+        "status": "In Stock",
+        "rating": 4.4,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "keyFeatures": {
+          "Brand": "Brand X",
+          "Model": "Model PQR",
+          "Specification": "Spec STU",
+          "Port": "HDMI, DisplayPort",
+          "Type": "LED",
+          "Voltage": "110-240V"
+        },
+        "individualRating": 4.4,
+        "averageRating": 4.4
+      }
+    ]
+  }
 }
