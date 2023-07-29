@@ -2,8 +2,10 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
+  const { data: session } = useSession();
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -35,12 +37,23 @@ export default function Home() {
 
   return (
     <>
-      <section className="py-8">
+      <section className="py-2">
         <div className="container mx-auto">
           <div className="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
-            <h2 className="text-2xl font-bold leadi sm:text-4xl">
-              Get Your Pack PC
+            <h2 className="mb-3 text-base text-gray-500 sm:mt-5 sm:text-5xl lg:text-lg xl:text-xl">
+              Thanks to{" "}
+              <span className="text-indigo-500 font-semibold">
+                {session?.user?.name}
+              </span>{" "}
+              for signing in!
             </h2>
+            <p className="text-md text-gray-500 mb-5">
+              You are signed in as{" "}
+              <span className="font-medium text-indigo-500">
+                {session?.user?.email}
+              </span>
+            </p>
+            <h2 className="text-2xl font-bold sm:text-4xl">Get Your Pack PC</h2>
           </div>
           <div className="grid grid-cols-5 p-4 md:p-8">
             <div className="flex justify-center px-4 col-span-full md:col-span-1 md:flex-col md:justify-start md:items-start">
@@ -52,7 +65,11 @@ export default function Home() {
                     key={category._id}
                     className="flex items-center justify-between w-full mt-2"
                   >
-                    <button className="text-sm font-semibold text-black">
+                    <button
+                      className={`${
+                        category.name === "CPU / Processor" && "bg-gray-200"
+                      } w-full px-4 py-2 text-left rounded-md hover:bg-gray-200`}
+                    >
                       {category.name}
                     </button>
                   </div>
