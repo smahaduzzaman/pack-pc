@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import FeaturedCategory from "./FeaturedCategory";
 
 const Navbar = () => {
   return (
@@ -61,10 +59,18 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="items-center flex-shrink-0 hidden lg:flex">
-          <button className="self-center px-8 py-3 rounded">Sign in</button>
-          <button className="self-center px-8 py-3 font-semibold rounded bg-violet-400 text-gray-900">
-            Sign up
-          </button>
+          <Link href="/login" className="self-center px-8 py-3 rounded">
+            Login
+          </Link>
+          <Link href="/logout" className="self-center px-8 py-3 rounded">
+            Logout
+          </Link>
+          <Link
+            href="/register"
+            className="self-center px-8 py-3 font-semibold rounded bg-violet-400 text-gray-900"
+          >
+            Register
+          </Link>
         </div>
         <button className="p-4 lg:hidden">
           <svg
