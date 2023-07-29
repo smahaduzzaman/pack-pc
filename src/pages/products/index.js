@@ -1,14 +1,17 @@
+import RootLayout from "@/components/Layouts/RootLayout";
+import { redirect } from "next/dist/server/api-utils";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const Product = ({ products }) => {
-  console.log(products);
+const Products = ({ products }) => {
   return (
     <section className="container mx-auto my-8 px-4">
       <h2 className="text-2xl font-bold mb-4">Products</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products?.slice(0, 4).map((product) => (
           <div key={product.id} className="bg-white p-4 rounded shadow">
+            <p className="text-lg text-black mb-5">ID: {product?._id}</p>
             <Image
               src={product?.image}
               alt={product?.productName}
@@ -47,6 +50,23 @@ const Product = ({ products }) => {
                 {"★".repeat(5 - product?.rating)}
               </span>
             </div>
+            {/* create details and add to cart tailwind button in a div */}
+            <div className="flex justify-between items-center mt-4">
+              <Link
+                href={`/products/${product._id}`}
+                className="h-8 px-4 py-1.5 m-2 text-sm text-indigo-100 transition-colors duration-150 bg-indigo-600 rounded-lg focus:shadow-outline hover:bg-indigo-900"
+                // onClick={() => redirect(`/products/${product._id}`)}
+              >
+                Details
+              </Link>
+              <Link
+                href={`/products/${product._id}`}
+                className="h-8 px-4 m-2 py-1 text-sm text-indigo-100 transition-colors duration-150 bg-indigo-600 rounded-lg focus:shadow-outline hover:bg-indigo-900"
+                // onClick={() => redirect(`/products/${product._id}`)}
+              >
+                Add to Cart
+              </Link>
+            </div>
           </div>
         ))}
       </div>
@@ -54,4 +74,22 @@ const Product = ({ products }) => {
   );
 };
 
-export default Product;
+export default Products;
+
+Products.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
+
+const getStaticProps = async () => {
+  const res = await fetch(`http://localhost:5000/products`);
+  const data = await res.json();
+  console.log(data);
+
+  return {
+    props: {
+      products: data,
+    },
+  };
+};
+
+export { getStaticProps };

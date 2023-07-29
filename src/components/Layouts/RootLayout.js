@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <div className="container">
       <Head>
-        <title>PC Builder | Home</title>
+        <title>Pace PC | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
