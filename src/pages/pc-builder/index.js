@@ -1,9 +1,28 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-const PcBuilder = ({ categories }) => {
+const PcBuilder = () => {
+  const [categories, setCategories] = useState([]);
+  // const [selectedCategory, setSelectedCategory] = useState("");
+  useEffect(() => {
+    const getCategories = async () => {
+      const res = await fetch("http://localhost:5000/categories");
+      const data = await res.json();
+      setCategories(data);
+    };
+    getCategories();
+  }, []);
+
+  // const filterProducts = (product) => {
+  //   if (selectedCategory === product.category) {
+  //     return product;
+  //   }
+  // };
+
   return (
-    <div className="container p-2 mx-auto my-1 sm:p-4 bg-gray-700 text-gray-100">
+    <div className="container p-2 w-10/12 mx-auto my-5 sm:p-4 bg-gray-700 text-gray-100">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-semibold">Invoice</h2>
         <div className="flex items-center space-x-2">
@@ -35,12 +54,12 @@ const PcBuilder = ({ categories }) => {
               <th className="p-3">Status</th>
             </tr>
           </thead> */}
-          <tbody>
+          <tbody className=" w-11/12 mx-auto">
             {categories?.map((item) => {
               return (
                 <tr
                   key={item._id}
-                  className="border-b border-opacity-20 border-gray-700 bg-gray-900"
+                  className="border-b w-3/4 mx-auto border-opacity-20 border-gray-700 bg-gray-900"
                 >
                   <td className="p-3">
                     <Image
@@ -54,9 +73,12 @@ const PcBuilder = ({ categories }) => {
                     <p>{item.name}</p>
                   </td>
                   <td className="p-3">
-                    <span className="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900">
-                      <span>Choice</span>
-                    </span>
+                    <Link
+                      href={`/pc-builder/${item.name}`}
+                      className="px-3 py-1 font-semibold rounded-md bg-violet-400 text-gray-900"
+                    >
+                      Choose
+                    </Link>
                   </td>
                 </tr>
               );
@@ -74,14 +96,15 @@ PcBuilder.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/categories");
-  const data = await res.json();
-  console.log(data);
+// const getStaticProps = async () => {
+//   const res = await fetch("http://localhost:5000/products");
+//   const data = await res.json();
 
-  return {
-    props: {
-      categories: data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       products: data,
+//     },
+//   };
+// };
+
+// export { getStaticProps };

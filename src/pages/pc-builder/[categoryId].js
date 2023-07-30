@@ -1,49 +1,13 @@
-import RootLayout from "@/components/Layouts/RootLayout";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
-import Banner from "@/components/UI/Banner";
+import React from "react";
+import { useParams } from "next/navigation";
 
-export default function Home({ products }) {
-  const { data: session } = useSession();
-  const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
-
-  useEffect(() => {
-    const getCategories = async () => {
-      const res = await fetch("http://localhost:5000/categories");
-      const data = await res.json();
-      setCategories(data);
-    };
-    getCategories();
-  }, []);
-
-  const filterProducts = (product) => {
-    if (selectedCategory === product.category) {
-      return product;
-    }
-  };
-
+const CategoryProducts = () => {
   return (
     <>
-      <Banner />
-      <section className="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
-        <h2 className="mb-3 text-base text-gray-500 sm:mt-5 sm:text-5xl lg:text-lg xl:text-xl">
-          Thanks to{" "}
-          <span className="text-indigo-500 font-semibold">
-            {session?.user?.name}
-          </span>{" "}
-          for signing in!
-        </h2>
-        <p className="text-md text-gray-500 mb-5">
-          You are signed in as{" "}
-          <span className="font-medium text-indigo-500">
-            {session?.user?.email}
-          </span>
-        </p>
-      </section>
-      <section className="py-8 text-black">
+      <h2>Category Product Page</h2>
+      {/* <section className="py-8 text-black">
         <div className="container mx-auto">
           <div className="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
             <h2 className="text-2xl font-bold leadi sm:text-4xl">
@@ -92,19 +56,14 @@ export default function Home({ products }) {
               {categories?.map((category) => {
                 return (
                   <div
-                    key={category._id}
                     onClick={() => setSelectedCategory(category.name)}
-                    default={
-                      !selectedCategory && category.name === "CPU / Processor"
-                    }
+                    key={category._id}
                     className="flex items-center justify-between w-full mt-2"
                   >
                     <button
-                      className={
-                        category.name === selectedCategory
-                          ? "text-violet-600 font-semibold"
-                          : "text-gray-500"
-                      }
+                      className={`${
+                        category.name === "CPU / Processor" && "bg-gray-200"
+                      } w-full px-4 py-2 text-left rounded-md hover:bg-gray-200`}
                     >
                       {category.name}
                     </button>
@@ -157,25 +116,9 @@ export default function Home({ products }) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
-}
-
-Home.getLayout = function getLayout(page) {
-  return <RootLayout>{page}</RootLayout>;
 };
 
-const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/products");
-  const data = await res.json();
-  console.log(data);
-
-  return {
-    props: {
-      products: data,
-    },
-  };
-};
-
-export { getStaticProps };
+export default CategoryProducts;
