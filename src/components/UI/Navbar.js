@@ -12,44 +12,109 @@ const Navbar = () => {
         >
           Pack PC
         </Link>
-        <ul className="items-stretch hidden space-x-3 lg:flex">
-          <li className="flex">
+        <button
+          id="dropdownInformationButton"
+          data-dropdown-toggle="dropdownInformation"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button"
+        >
+          Dropdown header{" "}
+          <svg
+            id="dropdownInformationButtonIcon"
+            class="w-4 h-4 ml-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </button>
+        <div
+          id="dropdownInformation"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+        >
+          <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+            <div>Bonnie Green</div>
+            <div class="font-medium truncate">name@flowbite.com</div>
+          </div>
+          <ul
+            class="py-1 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownInformationButton"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                Settings
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                Earnings
+              </a>
+            </li>
+          </ul>
+          <div class="py-1">
             <a
-              rel="noopener noreferrer"
               href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 border-transparent text-violet-400 border-violet-400"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
             >
-              Link
+              Sign out
             </a>
+          </div>
+        </div>
+        {/* <ul className="items-stretch hidden space-x-3 lg:flex">
+          <li className="flex">
+            <Link
+              href="/"
+              className="flex items-center px-4 -mb-1 border-b-2 border-transparent active:text-violet-400 border-violet-400"
+            >
+              Home
+            </Link>
           </li>
           <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 border-transparent"
+            <Link
+              href="/products"
+              className="flex items-center px-4 -mb-1 border-b-2 border-transparent active:text-violet-400 border-violet-400"
             >
-              Link
-            </a>
+              Products
+            </Link>
           </li>
           <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 border-transparent"
+            <Link
+              href="/about"
+              className="flex items-center px-4 -mb-1 border-b-2 border-transparent active:text-violet-400 border-violet-400"
             >
-              Link
-            </a>
+              About
+            </Link>
           </li>
           <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 border-transparent"
+            <Link
+              href="/contact"
+              className="flex items-center px-4 -mb-1 border-b-2 border-transparent active:text-violet-400 border-violet-400"
             >
-              Link
-            </a>
+              Contact
+            </Link>
           </li>
-        </ul>
+        </ul> */}
         <div className="items-center flex-shrink-0 lg:flex">
           {!session?.user ? (
             <>

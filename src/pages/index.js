@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
+import Banner from "@/components/UI/Banner";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -37,6 +38,7 @@ export default function Home() {
 
   return (
     <>
+      <Banner />
       <section className="py-2">
         <div className="container mx-auto">
           <div className="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
