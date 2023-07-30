@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
     <div className="container">
       <Head>
         <title>Pace PC | Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.jpeg" />
       </Head>
 
       <Navbar />

@@ -5,21 +5,14 @@ import { useEffect, useState } from "react";
 
 const PcBuilder = () => {
   const [categories, setCategories] = useState([]);
-  // const [selectedCategory, setSelectedCategory] = useState("");
   useEffect(() => {
     const getCategories = async () => {
-      const res = await fetch("http://localhost:5000/categories");
+      const res = await fetch("https://pack-pc-server.vercel.app/categories");
       const data = await res.json();
       setCategories(data);
     };
     getCategories();
   }, []);
-
-  // const filterProducts = (product) => {
-  //   if (selectedCategory === product.category) {
-  //     return product;
-  //   }
-  // };
 
   return (
     <div className="container p-2 w-10/12 mx-auto my-5 sm:p-4 bg-gray-700 text-gray-100">
@@ -44,16 +37,6 @@ const PcBuilder = () => {
             <col />
             <col className="w-24" />
           </colgroup>
-          {/* <thead className="bg-gray-700">
-            <tr className="text-left">
-              <th className="p-3">Invoice #</th>
-              <th className="p-3">Client</th>
-              <th className="p-3">Issued</th>
-              <th className="p-3">Due</th>
-              <th className="p-3 text-right">Amount</th>
-              <th className="p-3">Status</th>
-            </tr>
-          </thead> */}
           <tbody className=" w-11/12 mx-auto">
             {categories?.map((item) => {
               return (
@@ -95,16 +78,3 @@ export default PcBuilder;
 PcBuilder.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
-
-// const getStaticProps = async () => {
-//   const res = await fetch("http://localhost:5000/products");
-//   const data = await res.json();
-
-//   return {
-//     props: {
-//       products: data,
-//     },
-//   };
-// };
-
-// export { getStaticProps };

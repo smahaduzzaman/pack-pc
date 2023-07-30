@@ -12,7 +12,7 @@ export default function Home({ products }) {
 
   useEffect(() => {
     const getCategories = async () => {
-      const res = await fetch("http://localhost:5000/categories");
+      const res = await fetch("https://pack-pc-server.vercel.app/categories");
       const data = await res.json();
       setCategories(data);
     };
@@ -29,7 +29,6 @@ export default function Home({ products }) {
     } else {
       return false;
     }
-
   };
 
   return (
@@ -174,9 +173,8 @@ Home.getLayout = function getLayout(page) {
 };
 
 const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("https://pack-pc-server.vercel.app/products");
   const data = await res.json();
-  console.log(data);
 
   return {
     props: {

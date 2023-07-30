@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
   const { data: session } = useSession;
+
   return (
     <header className="p-4 bg-gray-800 text-gray-100">
       <div className="container flex justify-between h-16 mx-auto">

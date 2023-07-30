@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 
 const FeaturedCategory = ({ featuredCategories }) => {
-  console.log(featuredCategories);
   return (
     <section className="container mx-auto my-8 px-4">
       <h2 className="text-2xl font-bold mb-4">Featured Categories</h2>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-
 const FeaturedProduct = async ({ featuredProducts }) => {
   return (
     <section className="container mx-auto my-8 px-4">

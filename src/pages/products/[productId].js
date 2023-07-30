@@ -4,7 +4,12 @@ import React from "react";
 const ProductDetails = ({ product }) => {
   return (
     <div className="max-w-md mx-auto my-10 bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-      <img src={product.image} alt={product.productName} />
+      <Image
+        src={product.image}
+        alt={product.productName}
+        width={500}
+        height={500}
+      />
 
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-2">{product.productName}</h2>
@@ -64,9 +69,7 @@ const ProductDetails = ({ product }) => {
         <p className="text-sm text-gray-500 mt-2">
           Created at: {product.created_at}
           <br />
-          {/* Updated at: {product.updated_at} */}
         </p>
-        {/* Create a tailwind button for add to cart */}
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-3 rounded">
           Add to Cart
         </button>
@@ -78,7 +81,7 @@ const ProductDetails = ({ product }) => {
 export default ProductDetails;
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("https://pack-pc-server.vercel.app/products");
   const products = await res.json();
 
   const paths = products.map((product) => ({
@@ -90,9 +93,8 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.productId;
-  const res = await fetch(`http://localhost:5000/products/${id}`);
+  const res = await fetch(`https://pack-pc-server.vercel.app/products/${id}`);
   const data = await res.json();
-  console.log(data);
 
   return {
     props: {

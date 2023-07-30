@@ -14,13 +14,9 @@ const client = new MongoClient(uri, {
 
 async function run(req, res) {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-    // Send a ping to confirm a successful connection
-    console.log("Database Connection Successful");
 
     const productsCollection = client.db("packpc").collection("products");
-    // create a route to get all products
     if (req.method === "GET") {
       const products = await productsCollection.find({}).toArray();
       res.send().json({
@@ -29,7 +25,7 @@ async function run(req, res) {
         data: products,
       });
     }
-    // create a route to get a single product
+
     if (req.method === "GET") {
       const product = await productsCollection.findOne({ _id: req.query.id });
       res.send().json({
@@ -44,7 +40,6 @@ async function run(req, res) {
       message: "Error fetching products",
     });
   } finally {
-    // Ensures that the client will close when you finish/error
     // await client.close();
   }
 }
