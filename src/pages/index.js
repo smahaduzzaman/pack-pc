@@ -22,7 +22,14 @@ export default function Home({ products }) {
   const filterProducts = (product) => {
     if (selectedCategory === product.category) {
       return product;
+    } else if (selectedCategory === "") {
+      return product;
+    } else if (selectedCategory === "All") {
+      return product;
+    } else {
+      return false;
     }
+
   };
 
   return (
